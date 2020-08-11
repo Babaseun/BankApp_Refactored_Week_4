@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "BankApp_Refactored_Week4/1.0.0": {
+        "dependencies": {
+          "BankLibrary": "1.0.0"
+        },
+        "runtime": {
+          "BankApp_Refactored_Week4.dll": {}
+        }
+      },
+      "BankLibrary/1.0.0": {
+        "runtime": {
+          "BankLibrary.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BankApp_Refactored_Week4/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BankLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
