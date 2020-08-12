@@ -22,7 +22,7 @@ namespace BankApp_Refactored_Week4.Test
             TransactionController transaction = new TransactionController();
             var accounts = transaction.Transfer(newAccount1.AccountNumber, newAccount2.AccountNumber, 100); // initiated the transfer
                                                                                                             // assert
-            Assert.GreaterOrEqual(accounts[1].Balance, 100); // The balance of the second account should be greater
+            Assert.AreEqual(accounts[1].Balance, 100); // The balance of the second account should be greater
         }
 
         [Test]
