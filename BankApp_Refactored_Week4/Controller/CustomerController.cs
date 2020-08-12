@@ -6,7 +6,7 @@ namespace BankApp_Refactored_Week4
 {
     public class CustomerController : ICustomer
     {
-        public Customer GetCustomerDetails()
+        public Customer GetCustomerDetails() // Gets data from the user and returns it
         {
             Console.WriteLine("--------------Enter your fullname---------");
             string fullname = Console.ReadLine();
@@ -35,7 +35,7 @@ namespace BankApp_Refactored_Week4
             {
                 Customer customer = new Customer(fullname, email, password);
 
-                var customerData = controller.RegisterCustomer(customer);
+                var customerData = controller.RegisterCustomer(customer); // Registers the customer and stores it in a list
 
                 Console.WriteLine("User " + customerData.Fullname + " was added successfully ");
 
@@ -50,18 +50,18 @@ namespace BankApp_Refactored_Week4
 
         public Customer RegisterCustomer(Customer customer)
         {
-            BankDB.Customers.Add(customer);
+            BankDB.Customers.Add(customer); // Saves customer
 
             return customer;
         }
 
-        public Customer LoginCustomer(string email, string password)
+        public Customer LoginCustomer(string email, string password) // Checks if customer exists
         {
             var customer = BankDB.Customers.Find(customer => customer.Email == email && customer.Password == password);
             return customer;
         }
 
-        public Customer GetCustomerLoginCredentials()
+        public Customer GetCustomerLoginCredentials() // Gets the login data from customer
         {
             Console.WriteLine("--------------Enter your email-------------");
             string email = Console.ReadLine();

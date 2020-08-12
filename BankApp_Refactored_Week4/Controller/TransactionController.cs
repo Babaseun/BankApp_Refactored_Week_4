@@ -66,19 +66,22 @@ namespace BankApp_Refactored_Week4
 
             var user = BankDB.Customers.Find(customer => customer.ID == account.OwnerID);
 
-            // Transaction transaction = new Transaction();
 
-            // transaction.FullName = user.Fullname;
-            // transaction.Balance = account.Balance;
-            // transaction.AccountType = account.AccountType;
-            // transaction.Amount = amount;   // Saves the transaction of the user
-            // transaction.Date = DateTime.Now;
-            // transaction.Note = account.Note;
-            // transaction.OwnerID = user.ID;
+            if (user != null)
+            {
+                Transaction transaction = new Transaction();
 
-            // BankDB.Transactions.Add(transaction);
+                transaction.FullName = user.Fullname;
+                transaction.Balance = account.Balance;
+                transaction.AccountType = account.AccountType;
+                transaction.Amount = amount;   // Saves the transaction of the user
+                transaction.Date = DateTime.Now;
+                transaction.Note = account.Note;
+                transaction.OwnerID = user.ID;
 
+                BankDB.Transactions.Add(transaction);
 
+            }
 
 
 

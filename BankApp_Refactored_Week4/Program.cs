@@ -36,12 +36,12 @@ namespace BankApp_Refactored_Week4
                     try
                     {
                         CustomerController customer = new CustomerController();
-                        var response = customer.GetCustomerLoginCredentials();
+                        var response = customer.GetCustomerLoginCredentials(); // Gets the login data of the user
                         session.Token = response.ID;
                         session.Email = response.Email;
                         session.FullName = response.Fullname;
                     }
-                    catch (System.NullReferenceException)
+                    catch (System.NullReferenceException) // When session is not set it gives a null reference exception
                     {
                         goto HomePage;
                     }
@@ -77,7 +77,7 @@ namespace BankApp_Refactored_Week4
                     }
                     if (opt == "6")
                     {
-                        // When a user decides to Logout
+                        // When a user decides to Logout it return to the home page
                         goto HomePage;
 
                     }
