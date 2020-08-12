@@ -10,6 +10,7 @@ namespace BankApp_Refactored_Week4.Test
         [Test]
         public void TransactionFullame()
         {
+            //Arrange 
             Transaction transaction = new Transaction();
             transaction.FullName = "adeyemi onibokun";
             transaction.AccountNumber = "1234567890";
@@ -19,12 +20,40 @@ namespace BankApp_Refactored_Week4.Test
             transaction.OwnerID = Guid.NewGuid();
             transaction.Date = DateTime.Now;
 
+            //Act
             BankDB.Transactions.Add(transaction);
 
             TransactionController controller = new TransactionController();
             var response = controller.GetTransaction(transaction.OwnerID);
 
+            //Assert
             Assert.IsNotEmpty(response.AccountNumber);
         }
+        [Test]
+        public void TransactionBalanceIsPositive()
+        {
+            //Arrange 
+            Transaction transaction = new Transaction();
+            transaction.FullName = "adeyemi onibokun";
+            transaction.AccountNumber = "1234567890";
+            transaction.AccountType = "savings";
+            transaction.Amount = 100M;
+            transaction.Note = "dollar";
+            transaction.OwnerID = Guid.NewGuid();
+            transaction.Date = DateTime.Now;
+
+
+            //Act
+            BankDB.Transactions.Add(transaction);
+
+
+            TransactionController controller = new TransactionController();
+            var response = controller.GetTransaction(BankDB.Transactions[0].OwnerID);
+
+            //Assert
+            Assert.Positive(response.Amount);
+        }
+
+
     }
 }

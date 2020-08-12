@@ -1,21 +1,32 @@
 ﻿using System;
 using BankLibrary;
 
+
 namespace BankApp_Refactored_Week4
 {
-    public class CustomerController
+    public class CustomerController : ICustomer
     {
         public Customer GetCustomerDetails()
         {
             Console.WriteLine("--------------Enter your fullname---------");
             string fullname = Console.ReadLine();
-
+        BACK:
             Console.WriteLine("--------------Enter your email-------------");
             string email = Console.ReadLine();
+
 
             Console.WriteLine("--------------Enter your password---------");
             string password = Console.ReadLine();
 
+            Util utils = new Util();
+            var validateEmail = utils.isEmailValid(email);
+
+            if (validateEmail == false)
+            {
+                Console.WriteLine("------Please enter a valid email to continue ");
+
+                goto BACK;
+            }
             CustomerController controller = new CustomerController();
 
             var checkIfUserExist = BankDB.Customers.Find(customer => customer.Email == email);

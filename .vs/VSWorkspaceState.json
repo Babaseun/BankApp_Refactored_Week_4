@@ -1,8 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\BankApp_Refactored_Week4"
+    "\\BankApp_Refactored_Week4.Test"
   ],
-  "SelectedNode": "\\BankApp_Refactored_Week4\\BankApp_Refactored_Week4.sln",
+  "SelectedNode": "\\BankApp_Refactored_Week4.Test\\BankApp_Refactored_Week4.Test.csproj",
   "PreviewInSolutionExplorer": false
 }

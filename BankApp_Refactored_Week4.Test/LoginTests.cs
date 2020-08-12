@@ -6,19 +6,19 @@ namespace BankApp_Refactored_Week4.Test
     internal class LoginTests
     {
         [Test]
-        public void EmailTest()
+        public void EmailTest() // Tests the email value to see if its is a match
         {
-            Customer customer = new Customer("adeyemi", "ababaseun@gmail.com", "1234");
-            BankDB.Customers.Add(customer);
+            Customer customer = new Customer("adeyemi", "ababaseun@gmail.com", "1234"); // An object of the customer class which must been stored before user logs in
+            BankDB.Customers.Add(customer); // object is added to the list
 
             CustomerController controller = new CustomerController();
-            var response = controller.LoginCustomer("ababaseun@gmail.com", "1234");
+            var response = controller.LoginCustomer("ababaseun@gmail.com", "1234"); // Logs in the customer
 
-            Assert.AreEqual("ababaseun@gmail.com", response.Email);
+            Assert.AreEqual("ababaseun@gmail.com", response.Email); // Checks if return value are the same
         }
 
         [Test]
-        public void FullNameTest()
+        public void FullNameTest() // The process is the same as the one above
         {
             Customer customer = new Customer("adeyemi", "ababaseun@gmail.com", "1234");
 
