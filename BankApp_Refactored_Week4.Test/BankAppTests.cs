@@ -19,7 +19,7 @@ namespace BankApp_Refactored_Week4.Test
             BankDB.Accounts.Add(newAccount2);
 
             // act
-            TransactionController transaction = new TransactionController();
+            TransactionRepository transaction = new TransactionRepository();
             var accounts = transaction.Transfer(newAccount1.AccountNumber, newAccount2.AccountNumber, 100); // initiated the transfer
                                                                                                             // assert
             Assert.AreEqual(accounts[1].Balance, 100); // The balance of the second account should be greater
@@ -33,7 +33,7 @@ namespace BankApp_Refactored_Week4.Test
             BankDB.Accounts.Add(newAccount1);
             BankDB.Accounts.Add(newAccount2);
 
-            TransactionController transaction = new TransactionController();
+            TransactionRepository transaction = new TransactionRepository();
 
             var accounts = transaction.Transfer(newAccount1.AccountNumber, newAccount2.AccountNumber, 100);
 
@@ -49,7 +49,7 @@ namespace BankApp_Refactored_Week4.Test
             BankDB.Accounts.Add(newAccount);
 
             // act
-            TransactionController transaction = new TransactionController();  //Ensuring users don"t have a negative balance
+            TransactionRepository transaction = new TransactionRepository();  //Ensuring users don"t have a negative balance
                                                                               // When they try to do a withdrawal on a new account
             var response = transaction.Withdraw(1000, newAccount.AccountNumber);
 
@@ -65,7 +65,7 @@ namespace BankApp_Refactored_Week4.Test
             BankDB.Accounts.Add(newAccount);  // Creates an object of the account class and adds it 
 
             //act
-            TransactionController transaction = new TransactionController();
+            TransactionRepository transaction = new TransactionRepository();
             var response = transaction.Withdraw(1000, newAccount.AccountNumber);
             //assert
             Assert.AreEqual(response.Balance, 999000); // Checking if balance on withdraw is the same
@@ -80,7 +80,7 @@ namespace BankApp_Refactored_Week4.Test
             Customer customer = new Customer("adeyemi", "ababaseun@gmail.com", "1234");
 
             //act
-            CustomerController controller = new CustomerController();
+            CustomerRepository controller = new CustomerRepository();
             var response = controller.RegisterCustomer(customer);
 
             // assert
@@ -94,7 +94,7 @@ namespace BankApp_Refactored_Week4.Test
             Customer customer = new Customer("adeyemi", "ababaseun@gmail.com", "1234");
 
             //act
-            CustomerController controller = new CustomerController();
+            CustomerRepository controller = new CustomerRepository();
             var response = controller.RegisterCustomer(customer);
             // assert
             Assert.AreEqual("ababaseun@gmail.com", response.Email);
@@ -110,7 +110,7 @@ namespace BankApp_Refactored_Week4.Test
             BankDB.Customers.Add(customer); // object is added to the list
 
             //act
-            CustomerController controller = new CustomerController();
+            CustomerRepository controller = new CustomerRepository();
             var response = controller.LoginCustomer("ababaseun@gmail.com", "1234"); // Logs in the customer
 
             // assert
@@ -122,7 +122,7 @@ namespace BankApp_Refactored_Week4.Test
         {
             Customer customer = new Customer("adeyemi", "ababaseun@gmail.com", "1234");
 
-            CustomerController controller = new CustomerController();
+            CustomerRepository controller = new CustomerRepository();
             BankDB.Customers.Add(customer);
 
             var response = controller.LoginCustomer("ababaseun@gmail.com", "1234");
@@ -135,7 +135,7 @@ namespace BankApp_Refactored_Week4.Test
         {
             Customer customer = new Customer("adeyemi", "ababaseun@gmail.com", "1234");
 
-            CustomerController controller = new CustomerController();
+            CustomerRepository controller = new CustomerRepository();
             BankDB.Customers.Add(customer);
 
             var response = controller.LoginCustomer("ababaseun@gmail.com", "1234");
@@ -152,7 +152,7 @@ namespace BankApp_Refactored_Week4.Test
             BankDB.Accounts.Add(newAccount);  // An object of the account class was created and added to the list
 
             // act
-            TransactionController storeDeposit = new TransactionController();
+            TransactionRepository storeDeposit = new TransactionRepository();
             var account = storeDeposit.SaveDeposit(100, newAccount.AccountNumber); // When a new user saves 100 
                                                                                    // assert
             Assert.Greater(account.Balance, 0); // For a new account balance should be greater than 0
@@ -165,7 +165,7 @@ namespace BankApp_Refactored_Week4.Test
             BankDB.Accounts.Add(newAccount);
 
             // act
-            TransactionController storeDeposit = new TransactionController();
+            TransactionRepository storeDeposit = new TransactionRepository();
             var account = storeDeposit.SaveDeposit(100, newAccount.AccountNumber);
             // assert
             Assert.Positive(account.Balance);
@@ -188,7 +188,7 @@ namespace BankApp_Refactored_Week4.Test
             //Act
             BankDB.Transactions.Add(transaction);
 
-            TransactionController controller = new TransactionController();
+            TransactionRepository controller = new TransactionRepository();
             var response = controller.GetTransaction(transaction.OwnerID); // Gets the transaction ID of the user
 
             //Assert
@@ -212,7 +212,7 @@ namespace BankApp_Refactored_Week4.Test
             BankDB.Transactions.Add(transaction); // Adds the instance of the transaction class
 
 
-            TransactionController controller = new TransactionController();
+            TransactionRepository controller = new TransactionRepository();
             var response = controller.GetTransaction(BankDB.Transactions[0].OwnerID);
 
             //Assert

@@ -16,3 +16,12 @@ C:\Users\hp\Desktop\BankApp_Refactored_Week4\BankLibrary\obj\Debug\netstandard2.
 C:\Users\hp\Desktop\BankApp_Refactored_Week4\BankLibrary\obj\Debug\netstandard2.0\BankLibrary.csproj.CoreCompileInputs.cache
 C:\Users\hp\Desktop\BankApp_Refactored_Week4\BankLibrary\obj\Debug\netstandard2.0\BankLibrary.dll
 C:\Users\hp\Desktop\BankApp_Refactored_Week4\BankLibrary\obj\Debug\netstandard2.0\BankLibrary.pdb
+C:\Users\hp\Desktop\bank-app\BankApp_Refactored_Week_4\BankLibrary\bin\Debug\netstandard2.0\BankLibrary.deps.json
+C:\Users\hp\Desktop\bank-app\BankApp_Refactored_Week_4\BankLibrary\bin\Debug\netstandard2.0\BankLibrary.dll
+C:\Users\hp\Desktop\bank-app\BankApp_Refactored_Week_4\BankLibrary\bin\Debug\netstandard2.0\BankLibrary.pdb
+C:\Users\hp\Desktop\bank-app\BankApp_Refactored_Week_4\BankLibrary\obj\Debug\netstandard2.0\BankLibrary.csprojAssemblyReference.cache
+C:\Users\hp\Desktop\bank-app\BankApp_Refactored_Week_4\BankLibrary\obj\Debug\netstandard2.0\BankLibrary.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\bank-app\BankApp_Refactored_Week_4\BankLibrary\obj\Debug\netstandard2.0\BankLibrary.AssemblyInfo.cs
+C:\Users\hp\Desktop\bank-app\BankApp_Refactored_Week_4\BankLibrary\obj\Debug\netstandard2.0\BankLibrary.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\bank-app\BankApp_Refactored_Week_4\BankLibrary\obj\Debug\netstandard2.0\BankLibrary.dll
+C:\Users\hp\Desktop\bank-app\BankApp_Refactored_Week_4\BankLibrary\obj\Debug\netstandard2.0\BankLibrary.pdb

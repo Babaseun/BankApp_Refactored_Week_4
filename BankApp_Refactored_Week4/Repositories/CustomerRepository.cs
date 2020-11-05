@@ -1,10 +1,10 @@
-﻿using System;
-using BankLibrary;
+﻿using BankLibrary;
+using System;
 
 
 namespace BankApp_Refactored_Week4
 {
-    public class CustomerController : ICustomer
+    public class CustomerRepository : ICustomer
     {
         public Customer GetCustomerDetails() // Gets data from the user and returns it
         {
@@ -27,7 +27,7 @@ namespace BankApp_Refactored_Week4
 
                 goto BACK;
             }
-            CustomerController controller = new CustomerController();
+            CustomerRepository controller = new CustomerRepository();
 
             var checkIfUserExist = BankDB.Customers.Find(customer => customer.Email == email);
 
@@ -69,7 +69,7 @@ namespace BankApp_Refactored_Week4
             Console.WriteLine("--------------Enter your password---------");
             string password = Console.ReadLine();
 
-            CustomerController controller = new CustomerController();
+            CustomerRepository controller = new CustomerRepository();
 
             var customerData = controller.LoginCustomer(email, password);
 

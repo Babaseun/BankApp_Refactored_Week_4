@@ -1,10 +1,10 @@
-﻿using System;
+﻿using BankLibrary;
+using System;
 using System.Collections.Generic;
-using BankLibrary;
 
 namespace BankApp_Refactored_Week4
 {
-    public class TransactionController : ITransaction
+    public class TransactionRepository : ITransaction
     {
         public void GetTransactionData(string option) // Gets the transaction data from user and options for either deposit or withdrawal
         {
@@ -14,7 +14,7 @@ namespace BankApp_Refactored_Week4
             Console.WriteLine("--------Enter amount--------");
             decimal amount = decimal.Parse(Console.ReadLine());
 
-            AccountController account = new AccountController();
+            AccountRepository account = new AccountRepository();
             var getAccount = account.GetAccount(accountNumber); // Fetches the account 
 
             if (getAccount == null) // Checks if account for these user exists
@@ -25,17 +25,14 @@ namespace BankApp_Refactored_Week4
             {
                 if (option == "2")
                 {
-                    TransactionController transaction = new TransactionController();
+                    TransactionRepository transaction = new TransactionRepository();
                     var response = transaction.SaveDeposit(amount, accountNumber); // Saves deposit value of the user
-
-
-
 
 
                     Console.WriteLine("--------------Account Information----------");
                     Console.WriteLine();
                     Console.WriteLine("AccountID: " + response.ID);
-                    Console.WriteLine("AccountType: " + response.AccountType);  /// Displays Account of the user after deposit 
+                    Console.WriteLine("AccountType: " + response.AccountType);  // Displays Account of the user after deposit 
                     Console.WriteLine("AccountNumber: " + response.AccountNumber);
                     Console.WriteLine("Balance: " + response.Balance);
                     Console.WriteLine("CreatedAT: " + response.DateCreated);
@@ -44,7 +41,7 @@ namespace BankApp_Refactored_Week4
                 }
                 if (option == "3") // when the option is to withdraw
                 {
-                    TransactionController transaction = new TransactionController();
+                    TransactionRepository transaction = new TransactionRepository();
                     var response = transaction.Withdraw(amount, accountNumber);
 
                     Console.WriteLine("--------------Account Information----------");
@@ -69,15 +66,18 @@ namespace BankApp_Refactored_Week4
 
             if (user != null)
             {
-                Transaction transaction = new Transaction();
+                Transaction transaction = new Transaction
+                {
+                    FullName = user.Fullname,
+                    Balance = account.Balance,
+                    AccountType = account.AccountType,
+                    Amount = amount,
+                    Date = DateTime.Now,
+                    Note = account.Note,
+                    OwnerID = user.ID
+                };
 
-                transaction.FullName = user.Fullname;
-                transaction.Balance = account.Balance;
-                transaction.AccountType = account.AccountType;
-                transaction.Amount = amount;   // Saves the transaction of the user
-                transaction.Date = DateTime.Now;
-                transaction.Note = account.Note;
-                transaction.OwnerID = user.ID;
+                // Saves the transaction of the user
 
                 BankDB.Transactions.Add(transaction);
 
@@ -104,15 +104,16 @@ namespace BankApp_Refactored_Week4
 
             if (user != null)
             {
-                Transaction transaction = new Transaction();
-
-                transaction.FullName = user.Fullname;
-                transaction.Balance = account.Balance;
-                transaction.AccountType = account.AccountType;
-                transaction.Amount = amount;
-                transaction.Date = DateTime.Now;
-                transaction.Note = account.Note;
-                transaction.OwnerID = user.ID;
+                Transaction transaction = new Transaction
+                {
+                    FullName = user.Fullname,
+                    Balance = account.Balance,
+                    AccountType = account.AccountType,
+                    Amount = amount,
+                    Date = DateTime.Now,
+                    Note = account.Note,
+                    OwnerID = user.ID
+                };
 
                 BankDB.Transactions.Add(transaction);
 
@@ -154,15 +155,16 @@ namespace BankApp_Refactored_Week4
 
             if (user != null)
             {
-                Transaction transaction = new Transaction();
-
-                transaction.FullName = user.Fullname;
-                transaction.Balance = account1.Balance;
-                transaction.AccountType = account1.AccountType; // Stores the transaction
-                transaction.Amount = amount;
-                transaction.Date = DateTime.Now;
-                transaction.Note = account1.Note;
-                transaction.OwnerID = user.ID;
+                Transaction transaction = new Transaction
+                {
+                    FullName = user.Fullname,
+                    Balance = account1.Balance,
+                    AccountType = account1.AccountType, // Stores the transaction
+                    Amount = amount,
+                    Date = DateTime.Now,
+                    Note = account1.Note,
+                    OwnerID = user.ID
+                };
 
                 BankDB.Transactions.Add(transaction);
             }
@@ -205,11 +207,11 @@ namespace BankApp_Refactored_Week4
             Console.WriteLine("--------Enter amount--------");
             decimal amount = decimal.Parse(Console.ReadLine());
 
-            AccountController account = new AccountController();
+            AccountRepository account = new AccountRepository();
             var getAccount1 = account.GetAccount(accountNumber);
             var getAccount2 = account.GetAccount(accountNumber2);
 
-            TransactionController transaction = new TransactionController();
+            TransactionRepository transaction = new TransactionRepository();
             var updatedAccounts = transaction.Transfer(getAccount1.AccountNumber, getAccount2.AccountNumber, amount);
 
             Console.WriteLine("--------------Account Information----------");
@@ -240,7 +242,7 @@ namespace BankApp_Refactored_Week4
         }
         public void GetTransactionHistory(Guid ID)
         {
-            TransactionController controller = new TransactionController();
+            TransactionRepository controller = new TransactionRepository();
             var transaction = controller.GetTransaction(ID);
 
             Console.WriteLine("--------------Transaction History----------");

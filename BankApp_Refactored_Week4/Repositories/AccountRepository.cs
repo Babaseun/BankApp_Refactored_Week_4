@@ -3,15 +3,15 @@ using System;
 
 namespace BankApp_Refactored_Week4
 {
-    public class AccountController : IAccount
+    public class AccountRepository : IAccount
     {
-        public static int accountNumberGenerator = 1234567890;
-        public string accountNumber { get; set; }
+        private static int _accountNumberGenerator = 1234567890;
+        private string AccountNumber { get; set; }
 
-        public AccountController()
+        public AccountRepository()
         {
-            this.accountNumber = accountNumberGenerator.ToString();
-            accountNumberGenerator++;
+            this.AccountNumber = _accountNumberGenerator.ToString();
+            _accountNumberGenerator++;
         }
 
         public void CreateAccount(Guid ID) // Collects Data from user and creates an account
@@ -25,9 +25,9 @@ namespace BankApp_Refactored_Week4
             string accountType = option == "1" ? "savings" : "current";
             string accountNote = option2 == "1" ? "dollar" : "naria";
 
-            Account newAccount = new Account(accountType, accountNumber, 0M, ID, accountNote, DateTime.Now);
+            Account newAccount = new Account(accountType, AccountNumber, 0M, ID, accountNote, DateTime.Now);
 
-            var account = new AccountController();
+            var account = new AccountRepository();
             var addedAccount = account.SaveAccount(newAccount); // Saves the newly created account by calling the save method or function
 
             Console.WriteLine("------------------Account Created----------");

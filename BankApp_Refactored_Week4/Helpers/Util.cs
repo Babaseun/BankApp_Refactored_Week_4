@@ -1,5 +1,4 @@
-using System;
-
+using System.Text.RegularExpressions;
 
 namespace BankApp_Refactored_Week4
 {
@@ -7,12 +6,8 @@ namespace BankApp_Refactored_Week4
     {
         public bool isEmailValid(string email)
         {
-            return email.Contains("@") ? true : false;
+            return Regex.IsMatch(email, "/\\S+@\\S+\\.\\S+/");
         }
-
-
-
-
 
     }
 }

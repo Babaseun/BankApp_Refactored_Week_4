@@ -1,5 +1,5 @@
-﻿using System;
-using BankLibrary;
+﻿using BankLibrary;
+using System;
 
 namespace BankApp_Refactored_Week4
 {
@@ -18,14 +18,14 @@ namespace BankApp_Refactored_Week4
                 {
                     try
                     {
-                        CustomerController customer = new CustomerController();
+                        CustomerRepository customer = new CustomerRepository();
                         var response = customer.GetCustomerDetails();
                         // Getting the details from the customer
                         session.Token = response.ID;
                         session.Email = response.Email; // An Identifier for new user
                         session.FullName = response.Fullname;
                     }
-                    catch (System.NullReferenceException) // An Exception if the session is not set
+                    catch (System.NullReferenceException) // An Exception if the session is not setSSSSS
                     {
                         goto HomePage;
                     }
@@ -35,7 +35,7 @@ namespace BankApp_Refactored_Week4
                 {
                     try
                     {
-                        CustomerController customer = new CustomerController();
+                        CustomerRepository customer = new CustomerRepository();
                         var response = customer.GetCustomerLoginCredentials(); // Gets the login data of the user
                         session.Token = response.ID;
                         session.Email = response.Email;
@@ -52,27 +52,27 @@ namespace BankApp_Refactored_Week4
                     string opt = Console.ReadLine();
                     if (opt == "1")
                     {
-                        AccountController account = new AccountController();
+                        AccountRepository account = new AccountRepository();
                         account.CreateAccount(session.Token); //creates a new account for user
                     }
                     if (opt == "2")
                     {
-                        TransactionController transaction = new TransactionController();
+                        TransactionRepository transaction = new TransactionRepository();
                         transaction.GetTransactionData(opt); // Gets the transaction Data from user
                     }
                     if (opt == "3")
                     {
-                        TransactionController transaction = new TransactionController();
+                        TransactionRepository transaction = new TransactionRepository();
                         transaction.GetTransactionData(opt);
                     }
                     if (opt == "4")
                     {
-                        TransactionController controller = new TransactionController();
+                        TransactionRepository controller = new TransactionRepository();
                         controller.TransferBetweenAccounts(); // When user wants to transfer between accounts
                     }
                     if (opt == "5")
                     {
-                        TransactionController controller = new TransactionController();
+                        TransactionRepository controller = new TransactionRepository();
                         controller.GetTransactionHistory(session.Token); // Gets the history of transactions of a particular user
                     }
                     if (opt == "6")

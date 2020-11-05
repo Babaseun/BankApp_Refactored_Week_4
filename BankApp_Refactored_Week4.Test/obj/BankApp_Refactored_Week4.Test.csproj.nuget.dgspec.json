@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hp\\Desktop\\BankApp_Refactored_Week4\\BankApp_Refactored_Week4.Test\\BankApp_Refactored_Week4.Test.csproj": {}
+    "C:\\Users\\hp\\Desktop\\bank-app\\BankApp_Refactored_Week_4\\BankApp_Refactored_Week4.Test\\BankApp_Refactored_Week4.Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hp\\Desktop\\BankApp_Refactored_Week4\\BankApp_Refactored_Week4.Test\\BankApp_Refactored_Week4.Test.csproj": {
+    "C:\\Users\\hp\\Desktop\\bank-app\\BankApp_Refactored_Week_4\\BankApp_Refactored_Week4.Test\\BankApp_Refactored_Week4.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hp\\Desktop\\BankApp_Refactored_Week4\\BankApp_Refactored_Week4.Test\\BankApp_Refactored_Week4.Test.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\Desktop\\bank-app\\BankApp_Refactored_Week_4\\BankApp_Refactored_Week4.Test\\BankApp_Refactored_Week4.Test.csproj",
         "projectName": "BankApp_Refactored_Week4.Test",
-        "projectPath": "C:\\Users\\hp\\Desktop\\BankApp_Refactored_Week4\\BankApp_Refactored_Week4.Test\\BankApp_Refactored_Week4.Test.csproj",
+        "projectPath": "C:\\Users\\hp\\Desktop\\bank-app\\BankApp_Refactored_Week_4\\BankApp_Refactored_Week4.Test\\BankApp_Refactored_Week4.Test.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hp\\Desktop\\BankApp_Refactored_Week4\\BankApp_Refactored_Week4.Test\\obj\\",
+        "outputPath": "C:\\Users\\hp\\Desktop\\bank-app\\BankApp_Refactored_Week_4\\BankApp_Refactored_Week4.Test\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -31,11 +31,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\hp\\Desktop\\BankApp_Refactored_Week4\\BankApp_Refactored_Week4\\BankApp_Refactored_Week4.csproj": {
-                "projectPath": "C:\\Users\\hp\\Desktop\\BankApp_Refactored_Week4\\BankApp_Refactored_Week4\\BankApp_Refactored_Week4.csproj"
+              "C:\\Users\\hp\\Desktop\\bank-app\\BankApp_Refactored_Week_4\\BankApp_Refactored_Week4\\BankApp_Refactored_Week4.csproj": {
+                "projectPath": "C:\\Users\\hp\\Desktop\\bank-app\\BankApp_Refactored_Week_4\\BankApp_Refactored_Week4\\BankApp_Refactored_Week4.csproj"
               },
-              "C:\\Users\\hp\\Desktop\\BankApp_Refactored_Week4\\BankLibrary\\BankLibrary.csproj": {
-                "projectPath": "C:\\Users\\hp\\Desktop\\BankApp_Refactored_Week4\\BankLibrary\\BankLibrary.csproj"
+              "C:\\Users\\hp\\Desktop\\bank-app\\BankApp_Refactored_Week_4\\BankLibrary\\BankLibrary.csproj": {
+                "projectPath": "C:\\Users\\hp\\Desktop\\bank-app\\BankApp_Refactored_Week_4\\BankLibrary\\BankLibrary.csproj"
               }
             }
           }
@@ -77,18 +77,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\hp\\Desktop\\BankApp_Refactored_Week4\\BankApp_Refactored_Week4\\BankApp_Refactored_Week4.csproj": {
+    "C:\\Users\\hp\\Desktop\\bank-app\\BankApp_Refactored_Week_4\\BankApp_Refactored_Week4\\BankApp_Refactored_Week4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hp\\Desktop\\BankApp_Refactored_Week4\\BankApp_Refactored_Week4\\BankApp_Refactored_Week4.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\Desktop\\bank-app\\BankApp_Refactored_Week_4\\BankApp_Refactored_Week4\\BankApp_Refactored_Week4.csproj",
         "projectName": "BankApp_Refactored_Week4",
-        "projectPath": "C:\\Users\\hp\\Desktop\\BankApp_Refactored_Week4\\BankApp_Refactored_Week4\\BankApp_Refactored_Week4.csproj",
+        "projectPath": "C:\\Users\\hp\\Desktop\\bank-app\\BankApp_Refactored_Week_4\\BankApp_Refactored_Week4\\BankApp_Refactored_Week4.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hp\\Desktop\\BankApp_Refactored_Week4\\BankApp_Refactored_Week4\\obj\\",
+        "outputPath": "C:\\Users\\hp\\Desktop\\bank-app\\BankApp_Refactored_Week_4\\BankApp_Refactored_Week4\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -108,8 +108,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\hp\\Desktop\\BankApp_Refactored_Week4\\BankLibrary\\BankLibrary.csproj": {
-                "projectPath": "C:\\Users\\hp\\Desktop\\BankApp_Refactored_Week4\\BankLibrary\\BankLibrary.csproj"
+              "C:\\Users\\hp\\Desktop\\bank-app\\BankApp_Refactored_Week_4\\BankLibrary\\BankLibrary.csproj": {
+                "projectPath": "C:\\Users\\hp\\Desktop\\bank-app\\BankApp_Refactored_Week_4\\BankLibrary\\BankLibrary.csproj"
               }
             }
           }
@@ -137,18 +137,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\hp\\Desktop\\BankApp_Refactored_Week4\\BankLibrary\\BankLibrary.csproj": {
+    "C:\\Users\\hp\\Desktop\\bank-app\\BankApp_Refactored_Week_4\\BankLibrary\\BankLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hp\\Desktop\\BankApp_Refactored_Week4\\BankLibrary\\BankLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\Desktop\\bank-app\\BankApp_Refactored_Week_4\\BankLibrary\\BankLibrary.csproj",
         "projectName": "BankLibrary",
-        "projectPath": "C:\\Users\\hp\\Desktop\\BankApp_Refactored_Week4\\BankLibrary\\BankLibrary.csproj",
+        "projectPath": "C:\\Users\\hp\\Desktop\\bank-app\\BankApp_Refactored_Week_4\\BankLibrary\\BankLibrary.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hp\\Desktop\\BankApp_Refactored_Week4\\BankLibrary\\obj\\",
+        "outputPath": "C:\\Users\\hp\\Desktop\\bank-app\\BankApp_Refactored_Week_4\\BankLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -196,7 +196,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
